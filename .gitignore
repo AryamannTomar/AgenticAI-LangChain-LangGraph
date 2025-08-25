@@ -1,4 +1,5 @@
 .env
+requirements.txt
 
 KN - BasicsOfLangChain/
 01-Ingestion/chroma_db/
