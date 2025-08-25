@@ -21,24 +21,29 @@ def run_git_commands():
         print("❌ An error occurred while running git commands.",e)
     print("✅ git")
     
-def generate_tree(start_path,indent=""):
-    tree_str=""
+def generate_tree(start_path, indent=""):
+    tree_str = ""
     try:
-        items=sorted(os.listdir(start_path),key=str.lower)
-        for i,item in enumerate(items):
-            if(item==".git" or item=="rg_alias" or item=="myenv" or item==".env" or item=="Notes/Images/" or
-            (item in {"b.py"} and os.path.isfile(os.path.join(start_path,item))) or 
-            item.endswith('.py') or
-            item.endswith('.jpg')):
+        items = sorted(os.listdir(start_path), key=str.lower)
+        for i, item in enumerate(items):
+            path = os.path.join(start_path, item)
+
+            # skip unwanted folders/files
+            if (
+                item in {".git", "rg_alias", "myenv", ".env", "Images"}  # <-- exclude Images
+                or (item == "b.py" and os.path.isfile(path))
+                or item.endswith(".py")
+                or item.endswith(".jpg")
+            ):
                 continue
-            path=os.path.join(start_path,item)
-            is_last=(i==len(items)-1)
-            item_str=f"{item}" if os.path.isdir(path) else item
-            tree_str+=indent+("└── " if is_last else "├── ")+item_str+"\n"
+
+            is_last = (i == len(items) - 1)
+            tree_str += indent + ("└── " if is_last else "├── ") + item + "\n"
+
             if os.path.isdir(path):
-                tree_str+=generate_tree(path,indent+("    " if is_last else "│   "))
+                tree_str += generate_tree(path, indent + ("    " if is_last else "│   "))
     except PermissionError:
-        tree_str+=indent+"└── **[ACCESS DENIED]**\n"
+        tree_str += indent + "└── **[ACCESS DENIED]**\n"
     return tree_str
 
 if __name__=="__main__":
