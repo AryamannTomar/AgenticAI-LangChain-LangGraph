@@ -46,7 +46,7 @@ def generate_tree(start_path,indent=""):
 if __name__=="__main__":
     tree_structure=generate_tree('.')
     with open('README.md', 'w', encoding='utf-8') as f:
-        f.write("```bash\n")
+        f.write("```json\n")
         f.write("----- DIRECTORY STRUCTURE -----\n" + tree_structure)
         f.write("```\n")
     run_git_commands()
