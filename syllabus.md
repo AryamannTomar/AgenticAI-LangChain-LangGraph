@@ -4,7 +4,7 @@ graph TD
     S6([Section 6: OpenAI & Ollama<br/>1h24m]):::done
     S7([Section 7: LCEL Basics<br/>49m]):::done
     S8([Section 8: AI Agents + LangChain<br/>1h16m]):::done
-    S9([Section 9: AI Agents Vs Agentic AI<br/>30m]):::tiny
+    S9([Section 9: AI Agents Vs Agentic AI<br/>30m]):::done
     S10([Section 10: LangGraph Start<br/>1h56m]):::large
     S11([Section 11: LangGraph Components<br/>3h19m]):::xlarge
     S12([Section 12: Debugging w/ LangSmith<br/>21m]):::tiny
