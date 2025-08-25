@@ -10,8 +10,7 @@
 ├── 04-StoreConvHistory
 │   ├── a.ipynb
 │   └── rag.ipynb
-├── Notes
-│   └── documentation.md
+├── notes.md
 ├── README.md
 ├── requirements.txt
 ├── sampleMermaidCharts.md
