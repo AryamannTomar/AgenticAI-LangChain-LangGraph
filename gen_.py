@@ -44,11 +44,10 @@ def generate_tree(start_path,indent=""):
     return tree_str
 
 if __name__=="__main__":
-    run_git_commands()
     tree_structure=generate_tree('.')
     with open('README.md', 'w', encoding='utf-8') as f:
         f.write("## Project Directory Structure\n\n")
         f.write("```bash\n")
         f.write(tree_structure)
         f.write("```\n")
-    print("Completed")
+    run_git_commands()
