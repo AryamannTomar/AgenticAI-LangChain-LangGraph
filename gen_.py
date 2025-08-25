@@ -26,7 +26,7 @@ def generate_tree(start_path,indent=""):
     try:
         items=sorted(os.listdir(start_path),key=str.lower)
         for i,item in enumerate(items):
-            if(item==".git" or item=="rg_alias" or item=="myenv" or item==".env" or item=="Images/" or
+            if(item==".git" or item=="rg_alias" or item=="myenv" or item==".env" or item=="Notes/Images/" or
             (item in {"b.py"} and os.path.isfile(os.path.join(start_path,item))) or 
             item.endswith('.py') or
             item.endswith('.jpg')):
