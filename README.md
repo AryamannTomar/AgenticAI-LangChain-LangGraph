@@ -1,4 +1,4 @@
-```json
+```
 ----- DIRECTORY STRUCTURE -----
 ├── 01-Ingestion
 │   ├── a.ipynb
