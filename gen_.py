@@ -25,19 +25,22 @@ def generate_tree(start_path, indent=""):
     tree_str = ""
     try:
         items = sorted(os.listdir(start_path), key=str.lower)
-        for i, item in enumerate(items):
-            path = os.path.join(start_path, item)
 
-            # skip unwanted folders/files
+        # filter out unwanted
+        filtered_items = []
+        for item in items:
             if (
-                item in {".git", "rg_alias", "myenv", ".env", "Images"}  # <-- exclude Images
-                or (item == "b.py" and os.path.isfile(path))
+                item in {".git", "rg_alias", "myenv", ".env", "Images"} 
                 or item.endswith(".py")
                 or item.endswith(".jpg")
             ):
                 continue
+            filtered_items.append(item)
 
-            is_last = (i == len(items) - 1)
+        for i, item in enumerate(filtered_items):
+            path = os.path.join(start_path, item)
+            is_last = (i == len(filtered_items) - 1)
+
             tree_str += indent + ("└── " if is_last else "├── ") + item + "\n"
 
             if os.path.isdir(path):

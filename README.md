@@ -11,7 +11,7 @@
 │   ├── a.ipynb
 │   └── rag.ipynb
 ├── Notes
-│   ├── documentation.md
+│   └── documentation.md
 ├── README.md
 ├── requirements.txt
 ├── sampleMermaidCharts.md
