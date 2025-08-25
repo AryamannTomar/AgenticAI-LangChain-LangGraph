@@ -22,7 +22,7 @@ def run_git_commands():
     print("✅ git")
     
 def generate_tree(start_path,indent=""):
-    tree_str="----- DIRECTORY STRUCTURE -----\n"
+    tree_str=""
     try:
         items=sorted(os.listdir(start_path),key=str.lower)
         for i,item in enumerate(items):
@@ -46,8 +46,7 @@ def generate_tree(start_path,indent=""):
 if __name__=="__main__":
     tree_structure=generate_tree('.')
     with open('README.md', 'w', encoding='utf-8') as f:
-        f.write("## Project Directory Structure\n\n")
         f.write("```bash\n")
-        f.write(tree_structure)
+        f.write("----- DIRECTORY STRUCTURE -----\n" + tree_structure)
         f.write("```\n")
     run_git_commands()
