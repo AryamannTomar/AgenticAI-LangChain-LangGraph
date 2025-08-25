@@ -12,10 +12,6 @@
 │   └── rag.ipynb
 ├── Notes
 │   ├── documentation.md
-│   └── Images
-│       ├── Dia.png
-│       ├── qT.png
-│       └── retrieval.png
 ├── README.md
 ├── requirements.txt
 ├── sampleMermaidCharts.md
