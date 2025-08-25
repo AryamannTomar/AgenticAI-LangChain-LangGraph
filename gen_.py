@@ -22,7 +22,7 @@ def run_git_commands():
     print("✅ git")
     
 def generate_tree(start_path,indent=""):
-    tree_str=""
+    tree_str="----- DIRECTORY STRUCTURE -----\n"
     try:
         items=sorted(os.listdir(start_path),key=str.lower)
         for i,item in enumerate(items):
