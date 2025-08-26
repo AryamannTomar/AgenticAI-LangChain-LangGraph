@@ -1,5 +1,4 @@
 .env
-myenv/
 
 KN - BasicsOfLangChain/
 01-Ingestion/chroma_db/
