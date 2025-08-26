@@ -6,3 +6,5 @@ KN - BasicsOfLangChain/
 01-Ingestion/faiss_index/
 
 openAI/
+SampleRAG/FW__Contracts/
+SampleRAG/chroma_db/
