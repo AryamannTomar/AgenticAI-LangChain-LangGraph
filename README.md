@@ -15,9 +15,16 @@
 ├── requirements.txt
 ├── sampleMermaidCharts.md
 ├── SampleRAG
+│   ├── chroma_db
+│   │   ├── a0a8cad6-5ddb-43fd-8139-f173a416ec45
+│   │   │   ├── data_level0.bin
+│   │   │   ├── header.bin
+│   │   │   ├── length.bin
+│   │   │   └── link_lists.bin
+│   │   └── chroma.sqlite3
 │   ├── flow1.md
 │   ├── flow2.md
-│   ├── Iteration0_Results.xlsx
-│   └── pipeline_1_Aug25.ipynb
+│   ├── Iteration0_7Of15.xlsx
+│   └── pipeline0_Aug25.ipynb
 └── syllabus.md
 ```
